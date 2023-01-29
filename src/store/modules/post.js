@@ -23,8 +23,14 @@ export default {
   },
 
   getters: {
+    validPosts(state) {
+      return state.posts.filter(p => {
+        return p.title && p.body;
+      });
+    },
+
     allPosts(state) {
-      return state.posts
+      return state.posts;
     },
 
     postsCount(state) {
