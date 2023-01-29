@@ -33,8 +33,9 @@ export default {
       return state.posts;
     },
 
-    postsCount(state) {
-      return state.posts.length;
+    postsCount(state, getters) {
+      // return state.posts.length;
+      return getters.validPosts.length;
     }
   },
 }
